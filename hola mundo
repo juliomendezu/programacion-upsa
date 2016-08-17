@@ -1,0 +1,15 @@
+// juliomendez.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main() // cuerpo principar. void indica que no devuelve valores
+{
+	cout<<"Hola Mundo"<<endl;
+	cout<<"voy a destruir el mundo \n"<<"y a los humanos";
+	getch();
+}
