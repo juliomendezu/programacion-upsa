@@ -1,0 +1,51 @@
+// cuadratica.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	return 0;
+}
+#include "Stdafx.h"
+
+#include "iostream"
+
+#include "conio.h"
+
+#include "math.h"
+
+using namespace std;
+
+void main ()
+{
+	float A,B,C,D,X,X1,X2,XI,XR;
+	cout<<"ingrese A: ";
+	cin>> A;
+	cout<<"ingrese B: ";
+	cin>> B;
+	cout<<"ingrese C: ";
+	cin>> C;
+
+	D=pow(B,2)-4*A*C;
+	if (D>=0)
+		if (D==0)
+		{ X=-B/(2*A);
+		  cout<<"solucion unica; "<<X;
+	    }
+		else
+		{X1=-B+sqrt(D)/(2*A);
+		 X2=-B+sqrt(D)/(2*A);
+		 cout<<"solucion real 1: "<<X1;
+		 cout<<"soluciom real 2: "<<X2;
+	    }
+	else
+	{XR=-B/(2*A);
+	 XI=sqrt(-D)/(2*A);
+	 cout<<"La solucion imaginaria 1 es: "<<XR<<"+"<<XI<<"i";
+	 cout<<"La solucion imaginaria 2 es: "<<XR<<"-"<<XI<<"i";
+	}
+	getch();
+	}
+
