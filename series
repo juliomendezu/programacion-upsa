@@ -1,0 +1,28 @@
+// julio mendez.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float S,x;
+	int N, i, fact, flag;
+	S=0;
+	flag=-1;
+	cout<<"Ingrese el valor final de la serie: ";
+	cin>> N;
+	cout<<"Ingrese el valor de x: ";
+	cin>> x;
+	for (i=1; i<=N;i=i+2)
+	{
+		S=S+flag*(pow(x,i)/fact);
+		fact=fact*(i+1)*(i+1);
+	}
+	cout<<"La suma es: "<< S;
+	getch();
+}
