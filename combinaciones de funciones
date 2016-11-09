@@ -1,0 +1,47 @@
+// funcion combinatoria.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+//prototipos
+int facto(int f);
+void combi(float n, float r, float &x);
+
+//cuerpo principal
+void main()
+{
+	float n1, r1, x;
+	int f1, aux;
+	do {
+		cout<<"Ingresar el valor de n: ";
+		cin>>n1;
+	}while (!(n1>=0));
+	do {
+		cout<<"Ingresar el valor de r: ";
+		cin>>r1;
+	}while (!(r1>=0));
+
+	//Llamar a la funcion
+	combi(n1,r1,x);
+	cout<<"La combinatoria es: "<<x;
+	getch();
+}
+
+//Declaracion de funciones
+int facto(int f)
+{
+	int aux=1;
+	for (int i=2; i<=f; i++)
+		aux=aux*i;       //Acumulador de producto
+	return aux; //Devolver la salida
+}
+
+
+void combi(float n, float r, float &x)
+{
+	x=facto(n)/(facto(r)*facto(n-r));//llama a otra funcion
+}
