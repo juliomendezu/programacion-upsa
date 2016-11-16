@@ -1,0 +1,51 @@
+// juliomnedez}.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+
+void cargarvector (int a[], int tamanio);
+void mostrarvector (int a[], int tamanio);
+float promedio (int a[], int tam);
+void main()
+{
+	int n,vector[MAX];
+	float prom;
+	do {
+		cout<<"ingrese el numero de elementos del vector: ";
+		cin>>n;
+	}
+	while((n>MAX)|| (n<0));
+	cargarvector (vector, n);
+	mostrarvector(vector,n);
+	prom= promedio(vector,n);
+	cout<<"mostrar promedio: "<<prom;
+	getch();
+}
+
+
+void cargarvector(int a[], int tamanio)
+{
+	for(int i=0; i<tamanio; i++)
+	{
+		cout<<"v["<<i<<"]=";//solo para despliegue
+		cin>>a[i];
+	}
+}
+void mostrarvector(int a[], int tamanio)
+{
+	for(int i=0; i<tamanio; i++)
+		cout<<"v["<<i<<"]="<<a[i]<<endl;
+	
+}
+
+float promedio(int a[], int tamanio)
+{
+	float aux=0;
+	for(int i=0; i<tamanio; i++)
+		aux=aux+ a[i];
+	return aux/tamanio;
+}
