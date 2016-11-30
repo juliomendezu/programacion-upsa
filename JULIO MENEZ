@@ -10,7 +10,7 @@ using namespace std;
 	cout<<endl;
 	cout<<"***------------------------------BIENVENIDOS------------------------------***"<<endl;
 	cout<<"***----------------------------CACHAFACES RENT A CAR-----------------------------***"<<endl;
-	cout<<"CACHAFACES ofrece el servicio de alquiler de autos en los 9 departamentos de Bolivia"<<endl;
+	cout<<"CACHAFACES rent a car te brinda los mejores servicios en todo bolivia"<<endl;
 	cout<<"Puedes realizar tu alquiler ya sea dentro o fuera de Bolivia las !!24 horas del dia!!"<<endl;
 	cout<<endl;
 	cout<<endl;
