@@ -1,0 +1,99 @@
+#include "stdafx.h"
+#include <iostream>
+#include <stdio.h>
+#include <conio.h>
+
+using namespace std;
+
+
+  do {
+	cout<<endl;
+	cout<<"***------------------------------BIENVENIDOS------------------------------***"<<endl;
+	cout<<"***----------------------------CACHAFACES RENT A CAR-----------------------------***"<<endl;
+	cout<<"CACHAFACES ofrece el servicio de alquiler de autos en los 9 departamentos de Bolivia"<<endl;
+	cout<<"Puedes realizar tu alquiler ya sea dentro o fuera de Bolivia las !!24 horas del dia!!"<<endl;
+	cout<<endl;
+	cout<<endl;
+	cout << "Por favor, ingrese su nombre: / Please, enter your name:"<<endl<<endl;
+	getline(cin, nomb);
+  } while(nomb.size() == 0);
+  system("cls");
+
+  do {
+	cout << "SELECCIONE SU IDIOMA / SELECT YOUR LANGUAGE"<<endl;
+	cout << "1. Espanol"<<endl;
+	cout << "2. English"<<endl;
+	cin >> idi;
+  } while(idi != '1' && idi != '2'); 
+  system("cls");
+
+  if(idi == '1') {
+	cout << "BIENVENIDO, " << nomb << ", AL SISTEMA DE ALQUILER DE AUTOS"<<endl;
+	cout << "Presiona cualquier tecla para continuar"<<endl<<endl;
+  }
+  else {
+	cout << "WELCOME, " << nomb << ", TO THE CAR RENTAL SYSTEM"<<endl;
+	cout << "Press any key to continue"<<endl<<endl;
+  }
+  getch();
+  system("cls");
+
+  do {
+
+	if(idi == '1')
+	  cout << "SELECCIONE LA UBICACION A LA QUE VA A LLEGAR"<<endl;
+	else
+	  cout << "SELECT THE LOCATION ON WHICH YOU WILL ARRIVE"<<endl;
+	
+	cout << "1. La Paz"<<endl;
+	cout << "2. Santa Cruz"<<endl;
+	cout << "3. Cochabamba"<<endl;
+	cout << "4. Potosi"<<endl;
+	cout << "5. Oruro"<<endl;
+	cout << "6. Sucre"<<endl;
+	cout << "7. Tarija"<<endl;
+	cout << "8. Beni"<<endl;
+	cout << "9. Pando"<<endl;
+	cout << "0. Salir"<<endl;
+	cin >> op;
+	system("cls");
+
+	switch(op) {
+	  case '1':
+		general(idi, lp, "LA PAZ", nomb);
+		break;
+	  case '2':
+		general(idi, sc, "SANTA CRUZ", nomb);
+		break;
+	  case '3':
+		general(idi, cb, "COCHABAMBA", nomb);
+		break;
+	  case '4':
+		general(idi, pt, "POTOSI", nomb);
+		break;
+	  case '5':
+		general(idi, or, "ORURO", nomb);
+		break;
+	  case '6':
+		general(idi, su, "SUCRE", nomb);
+		break;
+	  case '7':
+		general(idi, ta, "TARIJA", nomb);
+		break;
+	  case '8':
+		general(idi, be, "BENI", nomb);
+		break;
+	  case '9':
+		general(idi, pa, "PANDO", nomb);
+		break;
+	  case '0':
+		cout << "Saliendo del programa..."<<endl;
+		break;
+	  default:
+		system("cls");
+		break;
+	}
+  } while(op != '0');
+
+  getch();
+}
